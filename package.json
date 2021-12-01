@@ -1,0 +1,23 @@
+{
+  "name": "aoc-2021",
+  "version": "1.0.0",
+  "description": "My code for Advent of Code 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./runner.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TotoTheDragon/AoC-2021.git"
+  },
+  "author": "DeveloperDragon <mrdragonplays2683@gmail.com> (http://developerdragon.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TotoTheDragon/AoC-2021/issues"
+  },
+  "homepage": "https://github.com/TotoTheDragon/AoC-2021#readme",
+  "dependencies": {
+    "@types/node": "^16.11.11"
+  }
+}
