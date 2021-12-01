@@ -11,4 +11,8 @@ export abstract class AoCPart {
         return file.toString().split(/\r?\n/);
     }
 
+    async getLinesAsInt(): Promise<number[]> {
+        const lines = await this.getLines();
+        return lines.map(str => parseInt(str));
+    }
 }
