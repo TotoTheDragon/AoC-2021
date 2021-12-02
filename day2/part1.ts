@@ -7,7 +7,25 @@ export default class Part1 extends AoCPart {
     async getAnswer(): Promise<string> {
         const lines = await this.getLines();
 
-        return "";
+        let horizontal = 0;
+        let depth = 0;
+        for (const line of lines) {
+            let [direction, amount] = line.split(" ");
+
+            switch (direction) {
+                case "forward":
+                    horizontal += +amount;
+                    break;
+                case "up":
+                    depth -= +amount;
+                    break;
+                case "down":
+                    depth += +amount;
+                    break;
+            }
+        }
+
+        return (horizontal * depth).toString();
     }
 
 }
