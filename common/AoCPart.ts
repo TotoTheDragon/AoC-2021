@@ -1,5 +1,4 @@
 import { readFile } from "fs/promises";
-import { dirname } from "path";
 
 export abstract class AoCPart {
 
@@ -14,5 +13,10 @@ export abstract class AoCPart {
     async getLinesAsInt(): Promise<number[]> {
         const lines = await this.getLines();
         return lines.map(str => parseInt(str));
+    }
+
+    async getParts(): Promise<string[][]> {
+        const file = await readFile(`${this.getPath()}/input.txt`);
+        return file.toString().split(/\r?\n\r?\n/).map(part => part.split(/\r?\n/));
     }
 }
